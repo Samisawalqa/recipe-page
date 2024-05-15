@@ -23,18 +23,36 @@
 .main {
     display: grid;
     grid-template-rows: repeat(auto, auto-fill);
-    width: 720px;
+    width: 650px;
     justify-content: center;
     background-color: var(--test);
     border-radius: 15px;
-    padding: calc(var(--paddSami) + 25px);
-    font-size: 16px;
-    gap: 30px;
+    padding: calc(var(--paddSami) + 20px);
+    gap: 10px;
+
 
 }
 
 body {
+    font-size: 16px;
+
+    font-family: "Outfit", sans-serif;
     background-color: hsl(30, 54%, 90%);
+
+    h2 {
+        font-family: "Young Serif", serif;
+        color: var(--blue);
+
+    }
+
+    li::marker {
+        color: var(--blue);
+    }
+
+    h1 {
+        font-family: "Young Serif", serif;
+        font-weight: 400;
+    }
 }
 
 div {
@@ -46,9 +64,24 @@ img {
     border-radius: 15px;
 }
 
+span {
+    font-weight: 600;
+}
+
 
 .prtime {
     background-color: var(--sami);
+    padding-left: 20px;
+    margin-top: 20px;
+
+    li::marker {
+        color: var(--white);
+        ;
+    }
+
+    h3 {
+        color: var(--white);
+    }
 }
 
 .nutri {
@@ -56,4 +89,37 @@ img {
     grid-template-columns: 1fr 1fr;
     row-gap: 20px;
 
+}
+
+.amount {
+    font-weight: 700;
+    color: var(--blue);
+}
+
+
+@media (max-width:710px) {
+
+    .main {
+        width: 95vw;
+        border-radius: 0px;
+        padding: 0px;
+
+    }
+
+
+
+    body {
+        background-color: white;
+        line-height: 34px;
+
+    }
+
+    img {
+        position: relative;
+        top: -10px;
+        left: -10px;
+        width: 110%;
+        border-radius: 0px;
+
+    }
 }
